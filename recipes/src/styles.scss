@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background-image: url("https://static-asset-hosting.s3.amazonaws.com/test-projects/2022-frontend/bg_desktop.png");
+  width: 100%;
+  height: 150vh;
+}
+
+@import url('https://assets.24g.com/public/2022-frontend-test-project/fonts.css');
+
+

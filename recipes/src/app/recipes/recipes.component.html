@@ -1,1 +1,24 @@
-<p>recipes works!</p>
+<div class="page-container">
+  <div class="top">
+    <img id="logo" src="https://static-asset-hosting.s3.amazonaws.com/test-projects/2022-frontend/24g_logo.svg" alt="logo">
+  </div>
+  <div class="middle">
+    <h1 class="welcome-text">Welcome Holiday Text</h1>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi laoreet volutpat sapien in tempor. Etiam sed sodales lorem. Cras sit amet massa felis. Proin varius sollicitudin velit ac mollis. Praesent vestibulum libero id ligula tempus pellentesque.
+    </p>
+  </div>
+  <div class="bottom" >
+    <ul class="recipes-container" *ngFor="let drinks of recipesData" >
+      <li *ngFor="let drink of drinks" class="hover-animation" (click)="displayRecipe(drink)">
+        <div class="images">
+          <img class="back-image" src={{drink.images.back}} alt="drink" >
+          <img class="front-image" src={{drink.images.front}} alt="drink" >
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- <app-recipe-instructions *ngIf="show" (click)="closeRecipe()" [drink]="drinkData"></app-recipe-instructions> -->
+
+

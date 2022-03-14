@@ -1,1 +1,31 @@
-<p>recipe-instructions works!</p>
+<div class="overlay-container">
+  <img id="x-image" src="https://assets.24g.com/public/2022-frontend-test-project/exit_icon.svg" alt="X" >
+  <div class="popup-container">
+    <h1 class="drink-name">{{drink.name}}</h1>
+    <div class="instructions-container">
+      <h2>Ingredients</h2>
+      <ul class="ingredients" *ngFor="let ingredient of drink.ingredients">
+        <li>{{ ingredient }}</li>
+      </ul>
+      <hr>
+
+      <h2>How to prepare</h2>
+      <ul class="steps" *ngFor="let step of drink.steps">
+        <li class="steps-grid"><p style="font-weight: 470; margin: 0px;">STEP &nbsp;{{drink.steps.indexOf(step) + 1}}</p><p style="margin: 0px;">&nbsp;{{ step }}</p></li>
+      </ul>
+      <hr>
+
+      <h2>Make it a mocktail</h2>
+      <ul class="mocktail">
+        <li>{{ drink.mocktail }}</li>
+      </ul>
+      <hr>
+
+      <h2>Glass recommendation</h2>
+      <ul class="glass-type">
+        <li>{{drink.glassware}}</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
